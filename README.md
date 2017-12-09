@@ -25,5 +25,17 @@ $ ./pony-ssl_tcp_echo_client
 GOT:hello world
 ```
 
+# Ciphers.sh
+Executing `ciphers.sh` will list the enabled ciphers for a server
+```
+$ ./ciphers.sh 127.0.0.1 8989
+tls1_2 ECDHE-RSA-AES256-GCM-SHA384: 	OK
+tls1_2 ECDHE-RSA-CHACHA20-POLY1305: 	OK
+tls1_2 ECDHE-RSA-AES128-GCM-SHA256: 	OK
+tls1_2 ECDHE-RSA-AES256-SHA384: 	OK
+tls1_2 ECDHE-RSA-AES128-SHA256: 	OK
+```
+
 # Acknowledgements
 From the [actor TCPConnection](https://github.com/ponylang/ponyc/blob/master/packages/net/tcp_connection.pony) documentation in the [ponyc](https://github.com/ponylang/ponyc) repo.
+ciphers.sh is based on [Using openSSL to determine which Ciphers are Enabled on a Server](https://securityevaluators.com/knowledge/blog/20151102-openssl_and_ciphers/) from [securityevaluators.com](https://securityevaluators.com/)
